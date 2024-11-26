@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .counter-box {
+            width: 130px;
+            height: 90px;
+            border-radius: 15px;
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-box" onclick="incrementCounter()">1</div>
+
+    <script>
+        let count = 1;
+        function incrementCounter() {
+            if (count < 9) {
+                count++;
+                document.querySelector('.counter-box').textContent = count;
+            } else if (count === 9) {
+                document.querySelector('.counter-box').textContent = '❤️';
+                document.querySelector('.counter-box').style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
